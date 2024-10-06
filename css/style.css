@@ -302,15 +302,81 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section {
   overflow: hidden;
-  position: absolute;
   width: 100%;
   top: 140px;
+  display: block;
   bottom: 100%;
   opacity: 0;
   z-index: 2;
 }
 
+
 section.section-show {
+  top: 70px;
+  bottom: auto;
+  opacity: 1;
+  padding-bottom: 0px;
+}
+
+section .container {
+  background: rgba(0, 0, 0, 0);
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  section {
+      top: 120px;
+  }
+  section.section-show {
+      top: 80px;
+  }
+}
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #12d640;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  color: #fff;
+}
+/* section {
+  overflow: hidden;
+  width: 100%;
+  top: 140px;
+  display: block;
+  bottom: 100%;
+  opacity: 0;
+  z-index: 2;
+} */
+
+/* section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  height: 100vh; 
+} */
+
+/* section.section-show {
   top: 70px;
   bottom: auto;
   opacity: 1;
@@ -329,20 +395,36 @@ section .container {
   section.section-show {
     top: 80px;
   }
-}
+} */
 
-.section-title h2 {
+/* .section-title h2 {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
+  display: block;
   line-height: 1px;
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #dee2e6;
   font-family: "Poppins", sans-serif;
-}
+} */
 
+/* .section-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1px;
+  display: block;
+  text-transform: uppercase;
+  color: #dee2e6;
+  text-align: center;
+  margin-bottom: 20px; 
+  font-size: 24px; 
+  font-weight: bold; 
+  font-family: "Poppins", sans-serif;
+} */
+
+/* 
 .section-title h2::after {
   content: "";
   width: 120px;
@@ -350,9 +432,9 @@ section .container {
   display: inline-block;
   background: #dee2e6;
   margin: 4px 10px;
-}
+} */
 
-.section-title p {
+/* .section-title p {
   margin: 0;
   margin: -15px 0 15px 0;
   font-size: 36px;
@@ -360,7 +442,7 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
-}
+} */
 
 /*--------------------------------------------------------------
 # About
